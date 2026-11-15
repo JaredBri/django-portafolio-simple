@@ -190,13 +190,12 @@
                     </figcaption>
                 </figure>
             </article>
+            {% empty %}
+                <div class="inexistente">
+                    <p class="mb-0">Todavía no hay proyectos registrados.</p>
+                </div>
+            {% endfor %}
         </div>
-
-        {% empty %}
-            <div class="inexistente">
-                <p class="mb-0">Todavía no hay proyectos registrados.</p>
-            </div>
-        {% endfor %}
 
     </section>
 
