@@ -1,0 +1,252 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Presentación -->
+<header class="row bg-black presentacion">
+
+    <div class="hero">
+        <article>
+            <h1>Hola, soy <strong>Jared Briones Arellano</strong></h1>
+            <p><strong>Estudiante de Ingenieria Informatica</strong></p>
+            <p class="espacio">
+                Apasionado por crear experiencias web modernas y accesibles.
+                Actualmente cursando la carrera de ingenieria Informatica en el Instituto
+                Técnico
+            </p>
+        </article>
+        <aside>
+            <img
+                src="{% static 'portfolio/images/profile.png' %}"
+                alt="Fotografía de perfil"
+                class="img-fluid">
+        </aside>
+    </div>
+    <a class="btn btn-primary btn-lg rounded-0 my-3" href="{% static 'portfolio/cv.pdf' %}" target="_blank">
+        Descarga mi CV
+        </a>
+</header>
+<main>
+    <!-- Sección de información personal -->
+    <section id="sobre-mi" class="sobreMi-detalle">
+        <div class="cajaTitulo">
+            <h2>SOBRE MI</h2>
+            <p>conoceme un poco mas</p>
+        </div>
+        <div class="sobreMi-flex ">
+            <article class="infoPersonal">
+                <p>
+                    <strong>Mi nombre es Jared Briones Arellano</strong> y soy estudiante de ingenieria informatica.
+                    Desde que descubrí la programación, me apasiona crear sitios web que sean 
+                    tanto funcionales como estéticamente agradables.
+                </p>
+                <p>
+                    Actualmente me encuentro perfeccionando mis conocimientos sobre Django, sus modulos 
+                    y tecnologias aplicables dentro de un proyecto, como pillow, boostrap, entre otros, con el
+                    objetivo de convertirme en un desarrollador fullStack profesional. Me gusta
+                    trabajar en equipo y aprender nuevas tecnologías.
+                </p>
+                <blockquote class="cita">
+                    «El único modo de hacer un gran trabajo es amar lo que haces.» — 
+                <span>Steve Jobs</span>
+                </blockquote>
+            </article>
+            
+            <aside class="tarjetaDatos">
+                <h3>Datos Personales</h3>
+                <ul>
+                    <li><strong>Edad:</strong> 25 años</li>
+                    <li><strong>Ciudad:</strong> Santiago, Chile</li>
+                    <li><strong>Email:</strong> yajairobriones@gmail.com</li>
+                    <li><strong>Carrera:</strong> Ingenieria Informatica</li>
+                    <li><strong>Intereses:</strong> Programar, Leer y Entrenar</li>
+                </ul>
+            </aside>
+        </div>  
+    </section>
+
+    <!-- Sección de habilidades -->
+    <section id="Habilidades" class="Habilidades-detalle">
+        <div class="cajaTitulo">
+            <h2>Habilidades</h2>
+            <p>Tecnologías y competencias</p>
+        </div>
+        <div class="habilidades-contenedor">
+            <table class="tabla-habilidades">
+                <thead>
+                    <tr>
+                        <th>tecnologías</th>
+                        <th>Nivel</th>
+                        <th>Dominio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML5</td>
+                        <td>Avanzado</td>
+                        <td><div class="barra"><span class="p90"></span></div></td>
+                    </tr>
+                    <tr>
+                        <td>CSS3</td>
+                        <td>Intermedio-Alto</td>
+                        <td><div class="barra"><span class="p80"></span></div></td>
+                    </tr>
+                        <tr>
+                        <td>JavaScript</td>
+                        <td>Intermedio</td>
+                        <td><div class="barra"><span class="p50"></span></div></td>
+                    </tr>
+                        <tr>
+                        <td>Git/Github</td>
+                        <td>Intermedio-Alto</td>
+                        <td><div class="barra"><span class="p70"></span></div></td>
+                    </tr>
+                        <tr>
+                        <td>python</td>
+                        <td>Intermedio</td>
+                        <td><div class="barra"><span class="p55"></span></div></td>
+                    </tr>
+                    </tr>
+                        <tr>
+                        <td>Django</td>
+                        <td>Intermedio-Avanzado</td>
+                        <td><div class="barra"><span class="p80"></span></div></td>
+                    </tr>
+                    </tr>
+                        <tr>
+                        <td>Jinja2</td>
+                        <td>Intermedio</td>
+                        <td><div class="barra"><span class="p55"></span></div></td>
+                    </tr>
+                    </tr>
+                        <tr>
+                        <td>Boostrap</td>
+                        <td>Intermedio</td>
+                        <td><div class="barra"><span class="p55"></span></div></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+        <div class="lista-habilidades">
+            <article class="tarjeta-lista">
+                <h3>Competencias Técnicas</h3>
+                <ul>
+                    <li>Maquetación responsiva</li>
+                    <li>Control de versiones con Git</li>
+                    <li>Diseño con Flexbox y Grid</li>
+                    <li>Accesibilidad web (WCAG)</li>
+                    <li>Estructuración responsable</li>
+                    <li>Conexión de proyectos y tecnologias</li>
+                </ul>
+            </article>
+            <article class="tarjeta-lista">
+                <h3>Ruta de Aprendizaje</h3>
+                <ol>
+                    <li>HTML5 y CSS3</li>
+                    <li>JavaScript ES6+</li>
+                    <li>Reac.js</li>
+                    <li>Node.js y Express</li>
+                    <li>Python</li>
+                    <li>Jinja2</li>
+                    <li>Django</li>
+                </ol>
+            </article>
+        </div>
+    </section>
+
+    <!-- Sección de proyectos -->
+    <section id="Proyectos" class="proyectos-detalle">
+        <div class="cajaTitulo">
+            <h3>Mis Proyectos</h3>
+            <p>Estos son algunos de mis proyectos.</p>
+        </div>
+
+        <div class="{% if projects %}proyectos-grid{% else %}proyectos-vacio{% endif %}">
+
+            {% for project in projects %}
+
+            <article class="tarjeta-proyecto card bg-black ">
+                <figure class="card-body">
+                    <div class="bg-purpura">
+                        <img src="{{ project.image.url }}" class="card-img-top" alt="{{ project.title }}">
+                    </div>
+
+                    <figcaption class="margen">
+                        <p class="proyecto-cat">{{ project.tipologia }}</p>
+                        <h2>{{ project.title }}</h2>
+                        <p>{{ project.description }}</p>
+
+                        {% if project.url %}
+                        <a
+                            href="{{ project.url }}"
+                            class="btn btn-light rounded-0 btn-sm"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Visita el Proyecto
+                        </a>
+                        {% endif %}
+                    </figcaption>
+                </figure>
+            </article>
+        </div>
+
+        {% empty %}
+            <div class="inexistente">
+                <p class="mb-0">Todavía no hay proyectos registrados.</p>
+            </div>
+        {% endfor %}
+
+    </section>
+
+    <!-- Sección de Conctacto -->
+    <section id="Contacto" class="Contacto-detalle">
+        <div class="cajaTitulo">
+                <h2>Contacto</h2>
+            <p>Énviame un mensaje</p>
+        </div>
+        <div class="contacto-contenedor">
+            <form action="/contacto" class="formulario" method="post">
+                <div class="fila">
+                    <div class="campo">
+                        <label for="nombre">Nombre Completo:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+                    </div>
+                    <div class="campo">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" required placeholder="Tu@email.com">
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label for="asunto">Asunto</label>
+                    <select name="asunto" id="asunto">
+                        <option value="">Selecciona un asunto</option>
+                        <option value="consulta">Consulta General</option>
+                        <option value="colaboracion">colaboracion</option>
+                        <option value="error">Reportar error</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea name="mensaje" id="mensaje" rows="5" 
+                    required minlength="10" placeholder="Escribe tu mensaje aqui..."></textarea>
+                </div>
+                <button type="submit">Enviar mensaje</button>
+            </form>
+            <aside class="info-contacto">
+                <h3>Información de Contacto</h3>
+                <ul>
+                    <li>📧 yajairobriones@gmail.com</li>
+                    <li>📍 Santiago, Chile</li>
+                    <li>📱 +56 9 2217 6893</li>
+                    <li>🌐 github.com/JaredBri</li>
+                </ul>
+            </aside>
+        </div>
+    </section>
+</main>
+
+{% endblock %}
